@@ -49,7 +49,7 @@ def add_header(response):
     response.headers['Cache-Control'] = 'public, max-age=600'
     return response
 
-@app.route('/profile')
+@app.route('/profile/')
 def profile():
     return render_template('profile.html', timeinf=timeinfo())
     
