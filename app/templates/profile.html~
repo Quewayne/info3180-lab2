@@ -6,7 +6,7 @@
 
 
 {% block main %}
-bb
+
 <div id="profile-pic">
          <img style="margin-top:10px; margin-left:10px;" src="https://scontent-atl3-1.xx.fbcdn.net/hphotos-xfl1/v/t1.0-9/11391207_1001898293163046_457188665426649314_n.jpg?oh=0d5f0bc3d8c5b98939efebcd7b3d55e9&oe=577F7440" height="150" width="150">
     </div>
