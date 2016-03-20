@@ -7,7 +7,9 @@ This file creates your application.
 """
 
 from app import app
+from datetime import *
 from flask import render_template, request, redirect, url_for
+from flask.ext.bootstrap import Bootstrap
 
 
 ###
@@ -47,11 +49,23 @@ def add_header(response):
     response.headers['Cache-Control'] = 'public, max-age=600'
     return response
 
+@app.route('/profile')
+def profile():
+    return render_template('profile.html', timeinf=timeinfo())
+    
 
 @app.errorhandler(404)
 def page_not_found(error):
     """Custom 404 page."""
     return render_template('404.html'), 404
+    
+def timeinfo():
+    datt = datetime.now()
+    weekday = datt.strftime("%A") + ", "
+    day = datt.strftime("%d") + " "
+    month = datt.strftime("%B") + " "
+    year = datt.strftime("%Y")
+    return weekday + day + month + year
 
 
 if __name__ == '__main__':
