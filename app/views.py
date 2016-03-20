@@ -19,7 +19,7 @@ from flask.ext.bootstrap import Bootstrap
 @app.route('/')
 def home():
     """Render website's home page."""
-    return render_template('profile.html')
+    return render_template('home.html')
 
 
 @app.route('/about/')
